@@ -81,14 +81,12 @@ axios.get('http://saral.navgurukul.org/api/courses')
                 slug1=parent_data['data'][parents].slug
                 id1=parent_data['data'][parents]['id']
                 axios.get('http://saral.navgurukul.org/api/courses/'+id1+'/exercise/getBySlug?slug='+slug1)
-                .then(responses => {
-                    var parent_data=(responses.data);
-                    console.log(parent_data['content'])
-                }).catch(error => {
-                        console.log(error);
-                })
-
-
+                    .then(responses => {
+                        var parent_data=(responses.data);
+                        console.log(parent_data['content'])
+                    }).catch(error => {
+                            console.log(error);
+                    })
                 }
             }
         }
